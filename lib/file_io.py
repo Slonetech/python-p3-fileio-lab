@@ -1,3 +1,6 @@
+from lib.file_io import write_file, append_to_file, read_file
+
+
 def write_file(file_name, file_content):
     with open(file_name + ".txt", "w", encoding="utf-8") as f:
         f.write(file_content)
@@ -7,7 +10,7 @@ def append_to_file(file_name, append_content):
         f.write(append_content)
 
 def read_file(file_name):
-    with open(file_name + ".txt", "r", encoding="utf-8") as f:
+    with open(file_name + ".txt", encoding="utf-8") as f:
         content = f.read()
     return content
 
